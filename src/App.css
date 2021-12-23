@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
+.button-container,
+.main-container,
+.counter-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 20%;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.counter-container {
+	margin-bottom: 2rem;
+	font-size: 2rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.button-container button {
+	width: 20%;
+	height: 7vh;
+	font-size: 2rem;
+	border-radius: 10px;
+	background: #ccc;
+	border: 2px solid black;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.button-container button:active {
+	background-color: #666;
 }
-
-.App-link {
-  color: #61dafb;
+.main-container {
+	justify-content: center;
+	flex-direction: column;
+	height: 100vh;
+	width: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media only screen and (max-width: 425px) {
+	.button-container,
+	.counter-container {
+		width: 80%;
+		height: 7vh;
+	}
+	.main-container img {
+		width: 80%;
+	}
+}
+@media only screen and (max-height: 425px) {
+	.button-container,
+	.counter-container {
+		height: 10vh;
+		width: 35%;
+	}
+	.main-container img {
+		height: 50%;
+	}
+	.button-container button {
+		height: 10vh;
+	}
+}
+@media only screen and (min-width: 426px) and (min-height: 1024px) and (max-width: 768px) {
+	.button-container,
+	.counter-container {
+		height: 10vh;
+		width: 50%;
+		font-size: 3rem;
+	}
+	.main-container {
+		font-size: 3rem;
+	}
+	.main-container img {
+		height: 40%;
+	}
+	.button-container button {
+		font-size: 3rem;
+	}
+}
+@media only screen and (min-height: 426px) and (min-width: 1024px) and (max-height: 768px) {
+	.button-container button {
+		width: 30%;
+	}
+	.main-container img {
+		height: 65%;
+	}
+}
+@media only screen and (min-width: 769px) and (min-height: 1366px) and (max-width: 1024px) {
+	.button-container,
+	.counter-container {
+		height: 10vh;
+		width: 70%;
+		font-size: 5rem;
+	}
+	.main-container {
+		font-size: 3rem;
+	}
+	.main-container img {
+		height: 40%;
+	}
+	.button-container button {
+		height: 10vh;
+		font-size: 5rem;
+	}
+}
+@media only screen and (min-height: 769px) and (min-width: 1366px) and (max-height: 1024px) {
+	.button-container,
+	.counter-container {
+		height: 10vh;
+		width: 50%;
+		font-size: 3rem;
+	}
+	.main-container {
+		font-size: 3rem;
+	}
+	.main-container img {
+		height: 60%;
+	}
+	.button-container button {
+		height: 10vh;
+		font-size: 4rem;
+	}
 }
