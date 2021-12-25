@@ -1,0 +1,10 @@
+.products-grid-container {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+	gap: 0.5rem;
+}
+@media only screen and (max-height: 425px) {
+	.products-grid-container .item-view img {
+		width: 50%;
+	}
+}
